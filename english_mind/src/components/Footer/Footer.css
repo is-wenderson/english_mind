@@ -1,0 +1,58 @@
+.footer-container {
+  padding: 60px 40px 20px 40px;
+  
+  /* DICA DE DESIGN: O Footer geralmente fica melhor sendo sempre escuro ou 
+     usando um tom bem contrastante. Vamos fixar ele no tom escuro do tema. */
+  background-color: #0B1120; 
+  color: #F3F4F6;
+  
+  border-top: 1px solid #1E293B;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-info h3,
+.footer-social h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-info p {
+  margin-bottom: 12px;
+  color: #9CA3AF; /* Cinza médio */
+  font-size: 15px;
+}
+
+.footer-social a {
+  color: #38BDF8; /* Azul Cyan */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #1E293B;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #6B7280;
+}

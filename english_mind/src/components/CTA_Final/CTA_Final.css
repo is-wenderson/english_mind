@@ -1,0 +1,48 @@
+.cta-final-container {
+  padding: 100px 40px;
+  
+  /* FUNDO ALTERNATIVO */
+  background-color: var(--bg-alt);
+  border-top: 1px solid var(--card-border);
+  
+  color: var(--text-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-final-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary-color); /* Título azul */
+}
+
+.cta-final-subtitle {
+  font-size: 20px;
+  max-width: 600px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.cta-final-button {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.cta-final-button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px var(--shadow-color);
+}

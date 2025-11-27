@@ -1,0 +1,63 @@
+.feedbacks-container {
+  padding: 80px 20px;
+  background-color: transparent;
+  text-align: center;
+  overflow: hidden; /* Garante que nada vaze */
+}
+
+.feedbacks-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 50px;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1300px; /* Bem largo para caber 3 prints */
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+/* Estilo da Imagem (Print) */
+.feedback-print {
+  width: 100%;
+  max-width: 350px; /* Tamanho ideal de um print de celular */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px var(--shadow-color);
+  transition: transform 0.3s ease;
+  /* Borda sutil para destacar do fundo se for branco no branco */
+  border: 1px solid var(--card-border);
+}
+
+.feedback-print:hover {
+  transform: scale(1.03);
+}
+
+/* Botão do Instagram */
+.btn-instagram {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-instagram:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Ajuste dos pontinhos */
+.swiper-pagination-bullet {
+  background-color: var(--text-color);
+  opacity: 0.3;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color) !important;
+  opacity: 1;
+}

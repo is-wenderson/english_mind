@@ -1,0 +1,118 @@
+/* Container usando cor alternativa para criar a faixa visual */
+.diferenciais-container {
+  padding: 80px 20px;
+  /* Alterna a cor de fundo em relação ao Hero */
+  background-color: var(--bg-alt); 
+  border-bottom: 1px solid var(--card-border);
+  text-align: center;
+}
+
+.diferenciais-header {
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+.diferenciais-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.diferenciais-subtitle {
+  font-size: 18px;
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* Grid dos Cards */
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* O Novo Visual do Card */
+.diferencial-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  
+  /* Cores Dinâmicas */
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: left;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  
+  /* Animação suave */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de Hover Moderno */
+.diferencial-card:hover {
+  transform: translateY(-8px); /* Sobe um pouco */
+  border-color: var(--primary-color); /* Borda fica azul */
+  box-shadow: 0 15px 30px var(--shadow-color); /* Sombra aumenta */
+}
+
+/* Ícone */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(56, 189, 248, 0.1); /* Fundo azul bem clarinho */
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  color: var(--primary-color); /* Cor do ícone */
+  transition: background-color 0.3s ease;
+}
+
+.icon-box svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Ao passar o mouse no card, o ícone fica mais forte */
+.diferencial-card:hover .icon-box {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.card-description {
+  font-size: 16px;
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .diferenciais-title {
+    font-size: 28px;
+  }
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .diferencial-card {
+    width: 100%;
+  }
+}

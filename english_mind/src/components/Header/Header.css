@@ -1,0 +1,119 @@
+/* Fixa o header no topo */
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
+  /* Fundo de vidro com a cor definida no index.css */
+  background: var(--nav-bg); 
+  backdrop-filter: blur(12px);
+  
+  /* Borda inferior para separar do conteúdo */
+  border-bottom: 1px solid var(--card-border);
+  
+  /* Sombra para dar efeito de flutuação */
+  box-shadow: 0 4px 20px var(--shadow-color);
+  
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area a {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: 2px solid var(--card-border);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 6px 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--card-border);
+  transform: scale(1.1);
+}
+
+.header-btn {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.header-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.mobile-toggle {
+  display: none;
+  color: var(--text-color);
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .nav-menu, .cta-area { display: none; }
+  .mobile-toggle { display: block; }
+  
+  .nav-menu.active {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--bg-color);
+    padding: 30px;
+    border-bottom: 1px solid var(--card-border);
+    gap: 20px;
+  }
+}

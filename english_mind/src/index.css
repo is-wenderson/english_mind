@@ -1,0 +1,66 @@
+:root {
+  /* --- MODO CLARO (Dia) --- */
+  --bg-color: #F3F4F6; /* Fundo Padrão (Cinza Suave) */
+  --bg-alt:   #FFFFFF; /* Fundo Alternativo (Branco Puro - para destaque) */
+  
+  --text-color: #111827; /* Texto Escuro */
+  --primary-color: #0EA5E9; /* Azul Sky */
+  
+  --card-bg: #FFFFFF; /* Cards */
+  --card-border: #E5E7EB; 
+  
+  --nav-bg: rgba(255, 255, 255, 0.9); /* Vidro do Header */
+  --shadow-color: rgba(0, 0, 0, 0.05);
+
+  /* Gradiente Suave para o Hero Claro */
+  --hero-gradient: linear-gradient(180deg, #E0F2FE 0%, #F3F4F6 100%);
+}
+
+/* --- MODO ESCURO (Noite) --- */
+[data-theme="dark"] {
+  --bg-color: #0F172A; /* Fundo Padrão (Azul Chumbo Profundo) */
+  --bg-alt:   #162038; /* Fundo Alternativo (Azul Levemente Mais Claro) */
+
+  --text-color: #F9FAFB; /* Texto Claro */
+  --primary-color: #38BDF8; /* Azul Neon */
+  
+  --card-bg: #1E293B; /* Cards (Azul acinzentado) */
+  --card-border: #334155; 
+  
+  --nav-bg: rgba(15, 23, 42, 0.9); /* Vidro do Header Escuro */
+  --shadow-color: rgba(0, 0, 0, 0.5);
+
+  /* Gradiente Tecnológico para o Hero Escuro */
+  --hero-gradient: radial-gradient(circle at top center, #1e293b 0%, #0f172a 80%);
+}
+
+/* Reset e Configurações Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Barra de Rolagem Personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}

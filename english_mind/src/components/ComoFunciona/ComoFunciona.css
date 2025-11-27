@@ -1,0 +1,86 @@
+.comofunciona-container-clean {
+  padding: 80px 40px;
+  background-color: var(--bg-color); 
+  overflow: hidden; 
+}
+
+.comofunciona-title-clean {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.passos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- O CARD --- */
+.passo-card-novo {
+  background-color: var(--card-bg);
+  
+  /* Borda padrão (cinza/sutil) */
+  border: 2px solid var(--card-border); 
+  
+  border-radius: 16px; /* Arredondei um pouco mais para ficar moderno */
+  padding: 35px 30px;
+  
+  box-shadow: 0 4px 12px var(--shadow-color);
+  text-align: center;
+  
+  /* Importante: A transição da cor da borda acontece aqui no CSS */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- EFEITO HOVER (A BORDA AZUL) --- */
+.passo-card-novo:hover {
+  /* A mágica acontece aqui: */
+  border-color: var(--primary-color); 
+  
+  /* Sombra um pouco mais forte para acompanhar o "pulo" do Framer Motion */
+  box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+.passo-icon {
+  margin-bottom: 25px;
+}
+
+.passo-icon img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.passo-title-novo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.passo-description-novo {
+  font-size: 16px;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .passos-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+@media (max-width: 768px) {
+  .comofunciona-container-clean {
+    padding: 60px 20px;
+  }
+  .comofunciona-title-clean {
+    font-size: 30px;
+  }
+}
